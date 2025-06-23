@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Marry Me, Fuggan? 💍</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      font-family: 'Merriweather', serif;
+      background: radial-gradient(ellipse at bottom, #0d0d0d, #000);
+      color: #fff;
+    }
+    .page {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .page.active {
+      display: flex;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #ff99cc;
+      margin-bottom: 20px;
+    }
+    button {
+      background: #ff69b4;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #ff85c1;
+    }
+    #giftBox {
+      width: 120px;
+      height: 120px;
+      margin: 30px auto;
+      background: #ff69b4;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: transform 0.4s;
+      box-shadow: 0 0 20px #ff69b4;
+    }
+    #giftBox:hover {
+      transform: scale(1.1);
+    }
+    .letter {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.05);
+      padding: 30px 25px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 0, 150, 0.2);
+      text-align: left;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+    .letter p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      text-align: right;
+      color: #ff69b4;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff69b4; }
+      to { text-shadow: 0 0 20px #ff1493; }
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <div class="page active" id="page1">
+    <h1>Will You Marry Me, Fuggan? 💍</h1>
+    <button onclick="nextPage()">Yes</button>
+    <button onclick="nextPage()">Definitely Yes</button>
+  </div>
+
+  <div class="page" id="page2">
+    <h1>Click the Gift Box 🎁</h1>
+    <div id="giftBox" onclick="nextPage()">🎁</div>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>Click "I Love You" to reveal your gift 💖</h1>
+    <button onclick="showLetter()">I Love You</button>
+  </div>
+
+  <div class="page" id="letterPage">
+    <div class="letter">
+      <h1>To My Dearest Arushi 💖</h1>
+
+      <p>From the first moment I heard your voice, something shifted deep within me. I didn’t know it then, but that moment would become the spark that lit a fire I never want to extinguish. Each day since, you’ve brought warmth into my life, laughter into my soul, and purpose to my heart.</p>
+
+      <p>We met online on April 15th at exactly 3:30 PM — a moment that changed my life in ways I never expected. Just two days later, on April 17th at 5 AM, I found myself doing the most natural thing in the world — proposing to you, because every fiber of my being already knew: you were the one.</p>
+
+      <p>You are the poetry in my silence, the music in my quiet mornings, and the colors in my black-and-white world. When I think about love, it’s not just the butterflies or the passion; it’s the safety in your arms, the calm in your presence, and the joy in your smile that define it for me. And with you, I've found all of that and more.</p>
+
+      <p>Every moment we've spent together has been a chapter of our beautiful story—one filled with love, mischief, understanding, and depth. From the smallest text message to the longest conversations under the stars, you've made me feel like the most cherished soul on this planet. I never believed in fate until I met you.</p>
+
+      <p>There are times I just sit back and replay our memories like my favorite movie. Your laughter is my favorite sound. Your name, my favorite word. And your heart—oh, Arushi, your heart is a place I never want to leave.</p>
+
+      <p>In a world of uncertainty, you are my constant. In the chaos of life, you are my peace. No matter how dark the night, your love has been my guiding light. And now, I want to promise you the same. I want to be your shield when you feel weak, your smile when life gets tough, and your hand to hold through every adventure.</p>
+
+      <p>What I feel for you cannot be described in words alone, but I’ve poured every piece of my heart into this letter hoping it brings even a fraction of the happiness you bring me every day.</p>
+
+      <p>I want to build a life with you. A life where we chase dreams together, celebrate every win and face every storm hand-in-hand. I want lazy Sundays and crazy Saturdays. I want laughter, tears, late-night talks, and early morning cuddles. I want *you*, in every lifetime, in every version of me.</p>
+
+      <p>I love the way you see the world, your kindness, your passion, your resilience. You inspire me to grow, to be a better man, to love more deeply. And with you, I've learned that love is not just a feeling—it’s a choice, a promise, a forever kind of thing.</p>
+
+      <p>So today, as you read this, I ask you: will you continue walking beside me? Will you allow me the honor of calling you my wife, my forever, my home?</p>
+
+      <p>Because there’s no one else I want to share this life with. No one else I want to laugh with, cry with, grow with, and grow old with. Only you, my Arushi. Always you.</p>
+
+      <p class="signature">From your Kunal 💌</p>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    function nextPage() {
+      document.getElementById(`page${currentPage}`).classList.remove("active");
+      currentPage++;
+      document.getElementById(`page${currentPage}`).classList.add("active");
+    }
+
+    function showLetter() {
+      document.getElementById("page3").classList.remove("active");
+      document.getElementById("letterPage").classList.add("active");
+      launchConfetti();
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById('confetti');
+      const ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const confettiCount = 150;
+      const confetti = [];
+      for (let i = 0; i < confettiCount; i++) {
+        confetti.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height - canvas.height,
+          r: Math.random() * 6 + 2,
+          d: Math.random() * confettiCount,
+          color: `hsl(${Math.random() * 360}, 100%, 70%)`,
+          tilt: Math.floor(Math.random() * 10) - 10,
+          tiltAngle: 0,
+          tiltAngleIncremental: (Math.random() * 0.07) + 0.05
+        });
+      }
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confetti.forEach(c => {
+          ctx.beginPath();
+          ctx.lineWidth = c.r;
+          ctx.strokeStyle = c.color;
+          ctx.moveTo(c.x + c.tilt + c.r / 2, c.y);
+          ctx.lineTo(c.x + c.tilt, c.y + c.tilt + c.r / 2);
+          ctx.stroke();
+        });
+        update();
+      }
+      function update() {
+        confetti.forEach(c => {
+          c.tiltAngle += c.tiltAngleIncremental;
+          c.y += (Math.cos(c.d) + 3 + c.r / 2) / 2;
+          c.tilt = Math.sin(c.tiltAngle - (c.d / 3)) * 15;
+          if (c.y > canvas.height) {
+            c.y = -10;
+            c.x = Math.random() * canvas.width;
+          }
+        });
+      }
+      function animateConfetti() {
+        draw();
+        requestAnimationFrame(animateConfetti);
+      }
+      animateConfetti();
+    }
+  </script>
+</body>
+</html>
